@@ -17,3 +17,16 @@ names. It provides one way rather than many ways for doing one thing. It has min
 * Class name should be noun/noun phrase, method name should be verb/verb phrase.
 * One world per concept.
 
+## Chapter 3: Functions
+* The functions should be small.
+* The blocks within if statements, else statements, while statements, and so on should be one line long. Functions should not be large enough to hold nested structures.
+* FUNCTIONS SHOULD DO ONE THING. THEY SHOULD DO IT WELL.THEY SHOULD DO IT ONLY.
+* The statements within our function are all at the same level of abstraction. (logic, dom...)
+* Open closed responsibilty: software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification. (We should strive to write code that doesn’t have to be changed every time the requirements change)  
+  http://joelabrahamsson.com/a-simple-example-of-the-openclosed-principle/
+* Use design pattern such as Abstract Factory, to make the structure clear. (Calculating the area of shapes: triangle, circle, rectangle should extend from shape class and implement their own area function.)
+* The function should not hold three or more arguments, if it indeed needs that many arguments, these arguments might be able to wrapped into a class. 
+The more the argumets the function has, the more difficult people will comprehend the code. Also, more difficult for testing.
+The function shouldn't have flag argument(boolean argument), since the function will be conflicted with the single responsibility rule, it will handle true and false situation.
+
+
