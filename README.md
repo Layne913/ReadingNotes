@@ -28,5 +28,9 @@ names. It provides one way rather than many ways for doing one thing. It has min
 * The function should not hold three or more arguments, if it indeed needs that many arguments, these arguments might be able to wrapped into a class. 
 The more the argumets the function has, the more difficult people will comprehend the code. Also, more difficult for testing.
 The function shouldn't have flag argument(boolean argument), since the function will be conflicted with the single responsibility rule, it will handle true and false situation.
+* If the function voilates the single responsibility rule, it might have some side effects which will influence the global.
+* In general, output arguments should be avoided. If your function must change the state of something, have it change the state of its owning object. For example, report.appndFooter() is better than appendFooter(StrinigBuffer report) in this sense.
+* The function should change the state of an object or it  should return some information about that object. But not doing them together.
+* 
 
 
