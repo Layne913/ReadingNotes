@@ -30,7 +30,13 @@ The more the argumets the function has, the more difficult people will comprehen
 The function shouldn't have flag argument(boolean argument), since the function will be conflicted with the single responsibility rule, it will handle true and false situation.
 * If the function voilates the single responsibility rule, it might have some side effects which will influence the global.
 * In general, output arguments should be avoided. If your function must change the state of something, have it change the state of its owning object. For example, report.appndFooter() is better than appendFooter(StrinigBuffer report) in this sense.
+* Command Query Seperation: the function should change the state of an object or it  should return some information about that object. But not doing them together.
+* ??????Perfer Excption to Returning Error??? create a new file under the direcotry
+* It is better to extract thee bodies of the try and catch blocks out into functions of their own.
+* Accroding to single responsibilty rule,if the keyword try exists in a function, it should be the very first word in the function and that there should be nothing after the catch/finally blocks.
+* Control/eliminate duplication.
+* If the function voilates the single responsibility rule, it might have some side effects which will influence the global.
+* In general, output arguments should be avoided. If your function must change the state of something, have it change the state of its owning object. For example, report.appndFooter() is better than appendFooter(StrinigBuffer report) in this sense.
 * The function should change the state of an object or it  should return some information about that object. But not doing them together.
-* 
 
 
