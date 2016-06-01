@@ -50,5 +50,20 @@ The function shouldn't have flag argument(boolean argument), since the function 
 * Bad Comments
   Misleading, redundant, mandated, jurnal Comments, noise comments, commented out code...
 
+## Chapter 5: Formatting
+* Vertical Formatting
+  Small files are usually easier to understand than large files are.
+  Different thoughts should be seperated from each other with blank lines.
+  Opennes seperates concepts, vertical density implies close association.
+  Variables shoud be declared as close to their usage as possible. Instance variables, on the other hand, should be declared at the top of the class(JAVA).
+  Dependent Function: if one function callls another, they should be veretically close, and the caller should be above the callee, if at all possible.
+  The stonger the conceptual affinity two parts of code have, the less vertical distance there should be between them. Affinity might be caused because a group of functions perform a similar operation.
+  The important, high level code comes first at the top, the detailed, low level  code comes then at bottom.
+* Horizontal Formatting
+  Horizontal limit for a line of code is 120 characters.
+  To make the hierarchy of scope visible, we indent the lines of code. One level to the right of their 'parent'
+* Team should have its own programing rules that every team member should apply.
+
+
 
 
