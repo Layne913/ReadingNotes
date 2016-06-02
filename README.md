@@ -64,6 +64,23 @@ The function shouldn't have flag argument(boolean argument), since the function 
   To make the hierarchy of scope visible, we indent the lines of code. One level to the right of their 'parent'
 * Team should have its own programing rules that every team member should apply.
 
+## Chapter 6: Objeccts and Data Structures
+* Hiding implementation (abstract/interface) allow users to manipulate the essence of the data,w ithout having to know its implementation.
+* Object hide their data behind abstractions and expose functions that operate on that data. Data Structure expose their data and have no meaningful functions.
+* The fundamental dichotomy between objects and data structure: 
+  Procedural code (coding using data structures) make it easy to add new functions without changing the existing data structure.
+  OO code (inheritance，interface), on the other hand, makes it easy to add new classes without changing existing functions.
+  However, procedural code makes it hard to add new data structures/data type(eg.class), because all the functiosn must change. OO code makes it hard to add new functions because all the classes must change.
+* The Law of Demeter says a module should not know about the innards of the objects it manipulates.
+  The method f of a class C should only call the methods of these:
+  -C
+  -An object created by f
+  -An object passed as an argument to f
+  -An object held in an instance variable of C
+  The method should not invoke methods on objects that are returned by andy of the allowed functions.
+
+
+
 
 
 
