@@ -71,13 +71,16 @@ The function shouldn't have flag argument(boolean argument), since the function 
   Procedural code (coding using data structures) make it easy to add new functions without changing the existing data structure.
   OO code (inheritance，interface), on the other hand, makes it easy to add new classes without changing existing functions.
   However, procedural code makes it hard to add new data structures/data type(eg.class), because all the functiosn must change. OO code makes it hard to add new functions because all the classes must change.
-* The Law of Demeter says a module should not know about the innards of the objects it manipulates.
-  The method f of a class C should only call the methods of these:
+* The Law of Demeter says a module should not know about the innards of the objects it manipulates.:
+  The method f of a class C should only call the methods of these
   -C
   -An object created by f
   -An object passed as an argument to f
   -An object held in an instance variable of C
   The method should not invoke methods on objects that are returned by andy of the allowed functions.
+  Train wrecks: a.b().c().d(); looks like a train, and voilate the law of Demeter
+* Hybrids structure: half object and half data structure. Difficult in both adding new data structure and adding new functions. Avoid  creating them.
+ 
 
 
 
