@@ -80,7 +80,21 @@ The function shouldn't have flag argument(boolean argument), since the function 
   The method should not invoke methods on objects that are returned by andy of the allowed functions.
   Train wrecks: a.b().c().d(); looks like a train, and voilate the law of Demeter
 * Hybrids structure: half object and half data structure. Difficult in both adding new data structure and adding new functions. Avoid  creating them.
- 
+
+## Chapter 7: Error Handling
+* Use exceptions rather than return codes
+* Define exception classes in terms of a caller's need.
+  ????? If you throw a checked exception from a method in your code and the catch is three levels above, you must declare that exception in the ???? signature of each method between you and the catch. This means that a change at a low level of the software  can force signature changes on many higher levels. The changed modules must be rebuilt and redeployed, even though nothing they care about changed.
+* Provide  Context with Exceptions
+  Create informative error message which contains failed operation together with the type of the failure, and pass them along  with your exceptions.
+  Types of error: by source; by type: device failures, network failures, or programming errors/
+* When define exception classes, the biggest concern should be how they are caught.
+* Wrapping a third party API will minimize dependencies upon it and easier for testing.
+* Special case Pattern: you create a class or configure an object so that it handles a special case for you. (set default returns)
+* Don't return null.Change the lower level code to try not return null, instead, it can return emptyList()..
+* Don't pass null. We could create a  new exception type and throw it or use a set of assertations.
+  When you do have pass a null, you can code with the knowledge that a null in an agrument list is an indication of a problem, and end up with far fewer careless mistakes.
+
 
 
 
