@@ -95,6 +95,14 @@ The function shouldn't have flag argument(boolean argument), since the function 
 * Don't pass null. We could create a  new exception type and throw it or use a set of assertations.
   When you do have pass a null, you can code with the knowledge that a null in an agrument list is an indication of a problem, and end up with far fewer careless mistakes.
 
+## Chapter 8: Boundaries
+* Keep the boundries clean: third party library and own code 
+  Using boundarie object like Map, keep it inside the class, or close family of classes, where it is used. Avoid returning it from, or accepting it as an argument to, public APIs.
+* Write tests for the third-party code we use. 
+  In learning/integreting third-party code, we can write some tests to explore the understanding of the third-party code.
+  A clean boundary should be supported by a set of outbound tests that exercise the interface the same way the production code does.
+* Using code that doesn't yet exist
+
 
 
 
